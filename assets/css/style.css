@@ -8,10 +8,16 @@ body {
     background-color: #99a7d8;
     font-family: 'Pangolin', cursive;
     text-align: center;
+    font-size: 60px;
 }
 
-h1 {
-    font-size: 100px;
+.stats-container {
+    text-align: right;
+    margin-bottom: 1.2em;
+}
+
+.stats-container span {
+    font-weight: 600;
 }
 
 .container {
@@ -19,11 +25,10 @@ h1 {
     place-items: center;
 }
 
-
 .cards {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
 }
 
 .card {
@@ -34,14 +39,14 @@ h1 {
     display: grid;
     place-items: center;
     cursor: pointer;
-    transition: 0.2s all ease;
+    transition: 0.2s all-ease;
 }
 
 .card img {
-    width: 80%;
+    width: 90px;
     max-height: 90px;
     opacity: 0;
-    transition: 0.2s all ease;
+    transition: 0.2s all-ease;
 }
 
 .card.clicked {
@@ -55,6 +60,19 @@ h1 {
 .card.clicked img,
 .card.checked img {
     opacity: 1;
+}
+
+#result {
+    text-align: center;
+}
+
+#result h2 {
+    font-size: 2.5em;
+}
+
+#result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
 }
 
 .card.shake {

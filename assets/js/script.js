@@ -2,6 +2,7 @@ let counter = 0;
 let firstSelection = "false";
 let secondSelection = "false";
 
+
 const cards = document.querySelectorAll(".cards .card");
 cards.forEach((card) => {
     card.addEventListener("click", () => {
@@ -41,9 +42,11 @@ cards.forEach((card) => {
     });
 });
 
+
 (function shuffle() {
     cards.forEach(card => {
         let ramdomPos = Math.floor(Math.random() * 16);
         card.style.order = ramdomPos;
     });
 })();
+
